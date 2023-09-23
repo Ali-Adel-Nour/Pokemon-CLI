@@ -4,8 +4,11 @@ import "fmt"
 
 func callbackHelp() {
 	fmt.Println("Welcome to the Pokedex help menu")
-	fmt.Println("Here are your avilable commands")
-	fmt.Println(" - help")
-	fmt.Println(" - exit")
+	fmt.Println("Here are your available commands:")
+	availableCommands := getCommands()
+	for _, cmd := range availableCommands {
+		fmt.Printf("- %s: %s\n", cmd.name, cmd.description) // Add \n for a newline
+	}
 	fmt.Println(" ")
+
 }
