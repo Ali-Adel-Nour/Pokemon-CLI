@@ -3,6 +3,7 @@ package pokeapi
 import (
 	"net/http"
 	"time"
+
 )
 
 const baseURL = "https://pokeapi.co/api/v2"
@@ -19,12 +20,4 @@ func NewClient() Client {
 	}
 }
 
-type LocatonAreasResp struct {
-	Count    int     `json:"count"`
-	Next     *string `json:"next"`
-	Previous any     `json:"previous"`
-	Results  []struct {
-		Name string `json:"name"`
-		URL  string `json:"url"`
-	} `json:"results"`
-}
+
